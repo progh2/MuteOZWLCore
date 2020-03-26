@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>x.ico</ApplicationIcon>
+    <StartupObject>MuteOZWLCore.App</StartupObject>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageIcon>x2.jpg</PackageIcon>
+    <PackageIconUrl />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\Users\progh2\Desktop\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="x.jpg" />
+    <None Remove="x.png" />
+    <None Include="..\..\..\..\Desktop\x2.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="x.jpg" />
+    <Resource Include="x.png" />
+  </ItemGroup>
+
+</Project>
